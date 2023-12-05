@@ -4,48 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Grocery Store</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: url('your-background-image.jpg');
+            background-image: url('https://via.placeholder.com/1920x1080');
             background-size: cover;
             background-position: center;
             color: #333;
+            margin: 0;
+            padding: 0;
         }
 
-        header {
+        header, nav, section, footer {
+            padding: 20px;
             background-color: rgba(255, 255, 255, 0.8);
-            padding: 1em;
-            text-align: center;
         }
 
         nav {
-            background-color: #28a745;
-            color: #fff;
-            padding: 1em;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         nav a {
-            color: #fff;
+            color: #333;
             text-decoration: none;
-            margin: 0 1em;
-        }
-
-        section {
-            padding: 2em;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1em;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            margin: 0 20px;
+            font-weight: bold;
         }
 
         .video-container {
@@ -53,6 +38,7 @@
             padding-bottom: 56.25%; /* 16:9 aspect ratio */
             height: 0;
             overflow: hidden;
+            margin-bottom: 20px;
         }
 
         .video-container iframe {
@@ -63,9 +49,22 @@
             height: 100%;
         }
 
-        .btn-primary {
-            background-color: #28a745;
-            border-color: #28a745;
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .product-card img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
         }
     </style>
 </head>
@@ -74,40 +73,46 @@
         <h1>Your Grocery Store</h1>
     </header>
     <nav>
-        <a href="home.html">Home</a>
-        <a href="product2.html">Products</a>
-        <a href="contact.html">Contact Us</a>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Contact Us</a>
     </nav>
-    <section class="container">
-
+    <section>
+        <div class="video-container">
+            <!-- Replace 'YOUR_VIDEO_URL' with the actual URL of your video -->
+            <iframe src="https://www.youtube.com/embed/yourvideoid" frameborder="0" allowfullscreen></iframe>
+        </div>
         <h2>Featured Products</h2>
-        <div class="row">
-            <div class="col-md-4 product-card">
-                <h3>Product 1</h3>
-                <p>Description of Product 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <button class="btn btn-primary">Add to Cart</button>
-            </div>
-            <div class="col-md-4 product-card">
-                <h3>Product 2</h3>
-                <p>Description of Product 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <button class="btn btn-primary">Add to Cart</button>
-            </div>
-            <div class="col-md-4 product-card">
-                <h3>Product 3</h3>
-                <p>Description of Product 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <button class="btn btn-primary">Add to Cart</button>
-            </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300" alt="Product 1">
+            <h3>Product 1</h3>
+            <p>Description of Product 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300" alt="Product 2">
+            <h3>Product 2</h3>
+            <p>Description of Product 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button>Add to Cart</button>
         </div>
     </section>
-    
-    
+    <section>
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
     <footer>
         <p>&copy; 2023 Your Grocery Store. All rights reserved.</p>
     </footer>
-
-    <!-- Bootstrap JS and Popper.js (Optional, but required for some Bootstrap features) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
